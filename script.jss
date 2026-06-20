@@ -1,140 +1,122 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
 body {
-    font-family: 'Pretendard', 'Malgun Gothic', sans-serif;
-    background-color: #f4f7f6;
+    font-family: 'Malgun Gothic', sans-serif;
+    background-color: #f0f2f5;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    padding: 20px;
+    margin: 0;
 }
 
 .container {
-    background-color: #ffffff;
-    padding: 30px;
+    background-color: white;
     border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     max-width: 800px;
     width: 100%;
     text-align: center;
 }
 
-h1 {
+h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
     color: #333;
-    margin-bottom: 20px;
-    font-size: 1.8rem;
 }
 
-.controls {
+.input-group {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     gap: 15px;
     margin-bottom: 30px;
     flex-wrap: wrap;
 }
 
-.input-group {
-    display: flex;
-    flex-direction: column;
+.input-box {
     text-align: left;
 }
 
-.input-group label {
-    font-size: 0.9rem;
-    color: #555;
-    margin-bottom: 5px;
+.input-box label {
+    display: block;
+    font-size: 14px;
     font-weight: bold;
+    color: #666;
+    margin-bottom: 5px;
 }
 
-.input-group input {
-    padding: 10px;
+.input-box input {
     width: 120px;
-    border: 2px solid #e0e0e0;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
     border-radius: 8px;
-    font-size: 1rem;
-    outline: none;
-    transition: border-color 0.3s;
+    text-align: center;
 }
 
-.input-group input:focus {
-    border-color: #4CAF50;
-}
-
-button {
-    padding: 12px 24px;
+.btn-submit {
     background-color: #4CAF50;
     color: white;
     border: none;
-    border-radius: 8px;
-    font-size: 1rem;
+    padding: 12px 24px;
+    font-size: 16px;
     font-weight: bold;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.1s;
+    transition: background 0.2s;
+    margin-top: 18px;
 }
 
-button:hover {
+.btn-submit:hover {
     background-color: #45a049;
 }
 
-button:active {
-    transform: scale(0.98);
-}
-
-.classroom {
-    background-color: #2c5e4f; /* 칠판 색상 */
+.blackboard-area {
+    background-color: #2e5643;
+    border: 8px solid #8e6d5d;
+    border-radius: 10px;
     padding: 20px;
-    border-radius: 12px;
-    border: 8px solid #8d6e63; /* 나무 테두리 느낌 */
+    margin-top: 20px;
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.teachers-desk {
-    background-color: #fff8e1;
+.teacher-desk {
+    background-color: #fff9e6;
     color: #5d4037;
+    font-weight: bold;
     padding: 10px 40px;
     border-radius: 5px;
-    display: inline-block;
-    margin-bottom: 20px;
-    font-weight: bold;
-    font-size: 1.1rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    font-size: 18px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    letter-spacing: 5px;
 }
 
-.seat-grid {
+.seating-chart {
     display: grid;
-    gap: 10px;
+    gap: 15px;
+    width: 100%;
     justify-content: center;
+    margin-top: 10px;
 }
 
 .seat {
-    background-color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.9);
     color: #333;
-    padding: 15px 0;
-    border-radius: 8px;
-    font-size: 1.2rem;
     font-weight: bold;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 60px;
-    animation: popIn 0.3s ease-out;
-}
-
-/* 빈 자리 스타일 */
-.seat.empty {
-    background-color: transparent;
-    box-shadow: none;
-    border: 2px dashed #ffffff55;
-    color: #ffffff55;
+    font-size: 16px;
+    padding: 15px;
+    border-radius: 6px;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+    text-align: center;
+    min-width: 50px;
+    animation: popIn 0.3s ease-out forwards;
 }
 
 @keyframes popIn {
-    0% { transform: scale(0.5); opacity: 0; }
-    100% { transform: scale(1); opacity: 1; }
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
 }
