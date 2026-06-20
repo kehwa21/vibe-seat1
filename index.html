@@ -8,28 +8,27 @@
 </head>
 <body>
 
-<div class="container">
-    <h2>🎲 두근두근 무작위 자리 배치</h2>
-    
-    <div class="input-group">
-        <div class="input-box">
-            <label for="totalStudents">총 학생 수</label>
-            <input type="number" id="totalStudents" value="28" min="1">
+    <div class="container">
+        <h2>🎲 두근두근 무작위 자리 배치</h2>
+        
+        <div class="input-group">
+            <div class="input-box">
+                <label for="totalStudents">총 학생 수</label>
+                <input type="number" id="totalStudents" value="28" min="1">
+            </div>
+            <div class="input-box">
+                <label for="colsPerLine">한 줄당 책상 수(열)</label>
+                <input type="number" id="colsPerLine" value="6" min="1">
+            </div>
+            <button class="btn-submit" onclick="drawSeats()">자리 뽑기</button>
         </div>
-        <div class="input-box">
-            <label for="colsPerLine">한 줄당 책상 수(열)</label>
-            <input type="number" id="colsPerLine" value="6" min="1">
+
+        <div class="blackboard-area">
+            <div class="teacher-desk">교 탁</div>
+            <div id="seatingChart" class="seating-chart"></div>
         </div>
-        <button class="btn-submit" id="drawBtn">자리 뽑기</button>
     </div>
 
-    <div class="blackboard-area">
-        <div class="teacher-desk">교 탁</div>
-        <div id="seatingChart" class="seating-chart"></div>
-    </div>
-</div>
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
