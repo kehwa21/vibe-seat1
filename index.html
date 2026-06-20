@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>진로 수업 자리 배치기</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🎲 두근두근 무작위 자리 배치</h1>
+        
+        <div class="controls">
+            <div class="input-group">
+                <label for="totalStudents">총 학생 수</label>
+                <input type="number" id="totalStudents" min="1" max="50" value="30">
+            </div>
+            <div class="input-group">
+                <label for="columns">한 줄당 책상 수(열)</label>
+                <input type="number" id="columns" min="1" max="10" value="6">
+            </div>
+            <button id="drawBtn">자리 뽑기</button>
+        </div>
+
+        <div class="classroom">
+            <div class="teachers-desk">교 탁</div>
+            <div id="seatGrid" class="seat-grid">
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
